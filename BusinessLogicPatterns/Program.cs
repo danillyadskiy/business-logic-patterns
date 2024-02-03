@@ -2,6 +2,7 @@
 using Client2 = BusinessLogicPatterns._2.ActiveRecord.Client;
 using Client3 = BusinessLogicPatterns._3.DomainModel.Client;
 using Client4 = BusinessLogicPatterns._4.EventSourcedDomainModel.Client;
+using Client5 = BusinessLogicPatterns._5.EventSourcedDomainModelWithProjection.Client;
 
 namespace BusinessLogicPatterns;
 
@@ -13,6 +14,7 @@ public class Program
         // ExecuteClient2();
         // ExecuteClient3();
         // ExecuteClient4();
+        // ExecuteClient5();
     }
     
     private static void ExecuteClient1()
@@ -36,6 +38,12 @@ public class Program
     private static void ExecuteClient4()
     {
         Client4 client = new Client4();
+        client.Execute();
+    }
+    
+    private static void ExecuteClient5()
+    {
+        Client5 client = new Client5();
         client.Execute();
     }
 }
